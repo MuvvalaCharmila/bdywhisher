@@ -4,25 +4,22 @@
   <title>Birthday Wish</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-image: url('CHH.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+<body>
 
-  <!-- 🎵 Birthday song -->
-  <audio autoplay loop>
-    <source src="bdy.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+<!-- ✅ Birthday Song -->
+<audio id="bdayMusic" src="bdy.mp3" type="audio/mpeg"></audio>
 
-  <div class="container">
-    <h1>🎂 Send Birthday Wishes 🎉</h1>
+<div class="container" id="wishContainer">
+  <h1>🎂 Send Birthday Wishes 🎉</h1>
+  <input type="text" id="nameInput" placeholder="Enter Name"><br><br>
+  <input type="date" id="dobInput"><br><br>
+  <button onclick="showWish()">Wish Now</button>
 
-    <input type="text" id="nameInput" placeholder="Enter Name"><br><br>
-    <input type="date" id="dobInput"><br><br>
+  <h2 id="wishMessage"></h2>
 
-    <button onclick="showWish()">Wish Now</button>
+  <img id="bdayPic" src="CHH.jpg" alt="Birthday Pic" style="display: none; width: 250px; border-radius: 20px; margin-top: 15px;">
+</div>
 
-    <h2 id="wishMessage"></h2>
-  </div>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
